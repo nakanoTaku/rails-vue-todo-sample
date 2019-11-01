@@ -1,0 +1,19 @@
+current directory: /Users/tnakano/rails/todo_sample/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+/Users/tnakano/.rbenv/versions/2.6.3/bin/ruby -I /Users/tnakano/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20191101-10033-ptpvsg.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tnakano/rails/todo_sample/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/tnakano/rails/todo_sample/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/tnakano/rails/todo_sample/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20191101-10033-vlkq9s/byebug
