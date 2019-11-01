@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+# 参考サイト
+https://qiita.com/naoki85/items/51a8b0f2cbf949d08b11#axios%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6api%E9%80%9A%E4%BF%A1
