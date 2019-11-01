@@ -141,7 +141,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    readline (0.0.1.pre.1)
+      reline
     regexp_parser (1.6.0)
+    reline (0.0.4)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
     sass-rails (6.0.0)
@@ -209,6 +212,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.0)
+  readline
   sass-rails
   selenium-webdriver
   spring
