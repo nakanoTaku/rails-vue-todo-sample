@@ -3,10 +3,10 @@
         <!-- 新規作成部分 -->
         <div class="row">
             <div class="col s10 m11">
-                <input class="form-control" placeholder="Add your task!!">
+                <input v-model="newTask" class="form-control" placeholder="Add your task!!">
             </div>
             <div class="col s2 m1">
-                <div class="btn-floating waves-effect waves-light red">
+                <div v-on:click="createTask" class="btn-floating waves-effect waves-light red">
                     <i class="material-icons">add</i>
                 </div>
             </div>
@@ -40,7 +40,11 @@
 
 <script>
     import axios from 'axios'
-
+    axios.defaults.headers.common = {
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    };
+    
     export default {
         data: function() {
             return {
@@ -59,10 +63,20 @@
                     }
                 }, (error) => {
                     console.log(error)
-                })
+                });
             },
             displayFinishedTasks: function() {
                 document.querySelector('#finished-tasks').classList.toggle('display_none')
+            },
+            createTask: function () {
+                if (!this.newTask) return;
+
+                axios.post('/api/tasks', { task: { name: this.newTask }}).then((response) => {
+                    this.tasks.unshift(response.data.task);
+                    this.newTask = '';
+                }, (error) => {
+                    console.log(error);
+                });
             }
         }
     }
